@@ -59,6 +59,7 @@ namespace GlazeWM.Bar.Components
         (_, _) => OnPropertyChanged(nameof(UnpinnedTrayIcons));
       _shellManager.NotificationArea.PinnedIcons.CollectionChanged +=
         (_, _) => OnPropertyChanged(nameof(PinnedTrayIcons));
+      _isExpanded = _config.IsExpanded;
     }
 
     public void ToggleShowAllIcons()
